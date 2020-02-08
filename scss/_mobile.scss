@@ -46,10 +46,9 @@
     transform: translate3d(100%, 0, 0);
 
     .portrait {
-      background: url("../img/portfolio.jpg");
-      background-size: cover;
-      width: 125px;
-      height: 125px;
+      background: url("../img/portrait_small.jpg");
+      width: 150px;
+      height: 150px;
     }
   }
 
@@ -63,6 +62,10 @@
 
     grid-template-columns: 1fr;
   }
+
+  .projects {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 // Smartphones
@@ -72,5 +75,14 @@
     #home h1 {
       margin-top: 10vh;
     }
+
+    .lg-heading {
+      margin-top: 1rem;
+      font-size: 5rem;
+    }
+  }
+
+  .projects {
+    grid-template-columns: 1fr;
   }
 }
