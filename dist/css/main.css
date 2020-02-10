@@ -162,10 +162,9 @@ main {
   grid-template-areas: "bioimage bio bio" "job1 job2 job3";
   grid-template-columns: repeat(3, 1fr); }
   .about-info .bio-image {
+    grid-area: bioimage;
     width: 250px;
     height: 250px;
-    grid-area: bioimage;
-    background-size: cover;
     margin: auto;
     border-radius: 50%;
     border: #6dc7f5 3px solid; }
@@ -186,9 +185,10 @@ main {
 .projects {
   display: grid;
   grid-gap: 0.7rem;
-  grid-template-columns: repeat(3, 1fr); }
+  grid-template-columns: repeat(2, 1fr); }
   .projects img {
     width: 100%;
+    height: 300px;
     border: 3px #fff solid; }
     .projects img:hover {
       opacity: 0.5;
@@ -210,22 +210,18 @@ main {
     .boxes div:hover {
       padding: 0.5rem 1.5rem;
       background: #6dc7f5;
-      color: set-text-color(#6dc7f5); }
+      color: #000; }
       .boxes div:hover span {
-        color: set-text-color(#6dc7f5); }
+        color: #000; }
 
-.btn, .btn-dark, .btn-light {
+.btn, .btn-light {
   display: block;
   padding: 0.5rem 1rem;
   border: 0;
   margin-bottom: 0.3rem; }
-  .btn:hover, .btn-dark:hover, .btn-light:hover {
+  .btn:hover, .btn-light:hover {
     background: #6dc7f5;
-    color: set-text-color(#6dc7f5); }
-
-.btn-dark {
-  background: black;
-  color: #fff; }
+    color: #000; }
 
 .btn-light {
   background: #c4c4c4;
@@ -235,16 +231,16 @@ main {
   text-align: center;
   padding: 1rem;
   background: #2b2b2b;
-  color: set-text-color(#444);
+  color: #fff;
   height: 60px; }
 
 @media screen and (min-width: 1171px) {
   .projects {
-    grid-template-columns: repeat(4, 1fr); } }
+    grid-template-columns: repeat(3, 1fr); } }
 
 @media screen and (min-width: 769px) and (max-width: 1170px) {
   .projects {
-    grid-template-columns: repeat(3, 1fr); } }
+    grid-template-columns: repeat(2, 1fr); } }
 
 @media screen and (max-width: 768px) {
   main {
@@ -269,14 +265,13 @@ main {
     height: 25vh;
     transform: translate3d(100%, 0, 0); }
     .menu-branding .portrait {
-      background: url("../img/portrait_small.jpg");
-      width: 150px;
-      height: 150px; }
+      width: 100px;
+      height: 100px; }
   .about-info {
     grid-template-areas: "bioimage" "bio" "job1" "job2" "job3";
     grid-template-columns: 1fr; }
   .projects {
-    grid-template-columns: repeat(2, 1fr); } }
+    grid-template-columns: 1fr; } }
 
 @media screen and (max-width: 500px) {
   main {
